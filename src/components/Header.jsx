@@ -1,6 +1,6 @@
 function Header({ titulo, descricao }) {
   return (
-    <header className="w-[95%] m-auto flex justify-between items-center p-5 my-3">
+    <header className="w-full m-auto flex justify-between items-center py-6 px-10">
       <div>
         <h1 className="text-[1.8em] font-semibold">{titulo}</h1>
         <p className="text-gray-500">{descricao}</p>
