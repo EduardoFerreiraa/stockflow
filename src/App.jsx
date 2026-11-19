@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Produtos from "./components/Produtos";
+import AlertaEstoque from "./components/AlertaEstoque";
 
 function App() {
   return (
@@ -14,6 +15,11 @@ function App() {
         />
         <main className="flex-1">
           <Produtos />
+          <AlertaEstoque
+            quantidadeProdutos={22}
+            estoquebaixo={18}
+            esgotados={4}
+          />
         </main>
       </div>
     </div>
