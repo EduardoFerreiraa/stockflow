@@ -2,6 +2,8 @@ import "./App.css";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Produtos from "./components/Produtos";
+import AlertaEstoque from "./components/AlertaEstoque";
+import TabelaProdutos from "./components/TabelaProdutos";
 
 function App() {
   return (
@@ -14,6 +16,19 @@ function App() {
         />
         <main className="flex-1">
           <Produtos />
+          <AlertaEstoque
+            quantidadeProdutos={22}
+            estoquebaixo={18}
+            esgotados={4}
+          />
+          <TabelaProdutos
+            produto="Teclado Mecânico K87"
+            sku="TEC-0087 - Perriféricos"
+            quantidadeInicial={148}
+            estoqueMinimo={35}
+            preco={157.59}
+            status="Em estoque"
+          />
         </main>
       </div>
     </div>
