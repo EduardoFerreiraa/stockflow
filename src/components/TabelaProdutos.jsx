@@ -34,9 +34,9 @@ function TabelaProdutos({
         <table className="w-full table-fixed">
           <colgroup>
             <col />
-            <col className="w-50" />
-            <col className="w-30" />
-            <col className="w-120" />
+            <col className="w-45" />
+            <col className="w-40" />
+            <col className="w-40" />
             <col className="w-50" />
           </colgroup>
           <thead className="border-b border-t border-[#E5EAF1] bg-slate-50">
