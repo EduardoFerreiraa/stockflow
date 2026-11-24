@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Produtos from "./components/Produtos";
 import AlertaEstoque from "./components/AlertaEstoque";
 import TabelaProdutos from "./components/TabelaProdutos";
+import FormularioProduto from "./components/FormularioProduto";
 
 function App() {
   return (
@@ -16,19 +17,21 @@ function App() {
         />
         <main className="flex-1">
           <Produtos />
-          <AlertaEstoque
-            quantidadeProdutos={22}
-            estoquebaixo={18}
-            esgotados={4}
-          />
-          <TabelaProdutos
-            produto="Teclado Mecânico K87"
-            sku="TEC-0087 - Perriféricos"
-            quantidadeInicial={148}
-            estoqueMinimo={35}
-            preco={157.59}
-            status="Em estoque"
-          />
+          <AlertaEstoque />
+          <div className="flex items-stretch">
+            <TabelaProdutos
+              produto="Teclado Mecânico K87"
+              sku="TEC-0087 - Perriféricos"
+              quantidadeInicial={148}
+              estoqueMinimo={35}
+              preco={157.59}
+              status="Em estoque"
+            />
+            <FormularioProduto
+              titulo="Cadastrar produto"
+              descricao="Preencha os dados para adicionar ao estoque."
+            />
+          </div>
         </main>
       </div>
     </div>
