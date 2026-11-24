@@ -1,6 +1,6 @@
 function AlertaEstoque({ quantidadeProdutos, estoquebaixo, esgotados }) {
   return (
-    <div className="w-full px-10 m-auto mt-6">
+    <div className="w-full px-10 m-auto mt-6 hidden">
       <div className="flex px-10 py-6 justify-between items-center border border-[#FCD34D] bg-[#FFFBEB] rounded-2xl">
         <div className="flex items-center justify-center gap-5">
           <svg

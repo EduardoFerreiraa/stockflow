@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Produtos from "./components/Produtos";
-// import AlertaEstoque from "./components/AlertaEstoque";
+import AlertaEstoque from "./components/AlertaEstoque";
 import TabelaProdutos from "./components/TabelaProdutos";
 import FormularioProduto from "./components/FormularioProduto";
 
@@ -17,6 +17,7 @@ function App() {
         />
         <main className="flex-1">
           <Produtos />
+          <AlertaEstoque />
           <div className="flex items-stretch">
             <TabelaProdutos
               produto="Teclado Mecânico K87"
