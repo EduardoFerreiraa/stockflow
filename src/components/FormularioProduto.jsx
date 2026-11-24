@@ -4,7 +4,7 @@ function FormularioProduto({ titulo, descricao }) {
     "w-full p-2.5 my-1 outline-none border border-[#CBD5E1] rounded-xl text-[#0F172A] transition-all duration- focus:border-[#2F5BE8]";
 
   return (
-    <div className="w-full h-full mr-10 my-6">
+    <div className="mr-10 my-6">
       <form className="flex flex-col py-5 px-7 bg-white border border-[#E5EAF1] rounded-2xl gap-3">
         <div>
           <h3 className="text-[#0F172A] text-[19px] font-black">{titulo}</h3>
@@ -48,7 +48,7 @@ function FormularioProduto({ titulo, descricao }) {
                 required
               >
                 <option value="" disabled>
-                  Selecione uma categoria
+                  Selecione
                 </option>
                 <option value="perifericos">Periféricos</option>
                 <option value="monitores">Monitores</option>
@@ -76,27 +76,29 @@ function FormularioProduto({ titulo, descricao }) {
             </select>
           </div>
 
-          <div className="w-full flex items-center gap-5">
-            <div className="flex flex-col items-start">
-              <label htmlFor="quantidadeInicial">Quantidade inicial</label>
-              <input
-                className={styleInput}
-                type="number"
-                id="quantidadeInicial"
-                placeholder="0"
-              />
+          <div>
+            <div className="w-full flex items-center gap-5">
+              <div className="flex flex-col items-start">
+                <label htmlFor="quantidadeInicial">Quantidade inicial</label>
+                <input
+                  className={styleInput}
+                  type="number"
+                  id="quantidadeInicial"
+                  placeholder="0"
+                />
+              </div>
+
+              <div className="flex flex-col items-start">
+                <label htmlFor="estoqueMinimo">Estoque mínimo</label>
+                <input className={styleInput} type="number" placeholder="0" />
+              </div>
             </div>
 
-            <div className="flex flex-col items-start">
-              <label htmlFor="estoqueMinimo">Estoque mínimo</label>
-              <input className={styleInput} type="number" placeholder="0" />
-            </div>
+            <p className="text-[#64748B] text-[14px] my-1">
+              Você será alertado quando a quantidade ficar abaixo do estoque
+              mínimo.
+            </p>
           </div>
-
-          <p className="text-[#64748B] text-[15px]">
-            Você será alertado quando a quantidade ficar abaixo do estoque
-            mínimo.
-          </p>
 
           <div className="w-full flex items-center gap-5">
             <div className="flex flex-col items-start">
@@ -116,10 +118,10 @@ function FormularioProduto({ titulo, descricao }) {
           </div>
 
           <div className="w-full justify-between flex items-center gap-4">
-            <button className="cursor-pointer w-full border border-[#CBD5E1] p-3 rounded-xl bg-white font-black">
+            <button className="cursor-pointer w-full border border-[#CBD5E1] p-3 rounded-xl bg-white font-black transition-all duration-200 hover:bg-[#F1F5F9] hover:border-[#94A3B8]">
               Cancelar
             </button>
-            <button className="cursor-pointer w-full border border-[#2F5BE8] p-3 rounded-xl bg-[#2F5BE8] text-white font-black">
+            <button className="cursor-pointer w-full border border-[#2F5BE8] p-3 rounded-xl bg-[#2F5BE8] text-white font-black hover:bg-[#2B54D5]">
               Salvar produto
             </button>
           </div>
