@@ -79,6 +79,13 @@ function FormularioProduto({ titulo, descricao }) {
       ...atual,
       [name]: value,
     }));
+
+    if (erros[name]) {
+      setErros({
+        ...erros,
+        [name]: "",
+      });
+    }
   }
 
   function handleSubmit(e) {
