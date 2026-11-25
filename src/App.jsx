@@ -10,14 +10,15 @@ function App() {
   return (
     <div className="flex h-screen bg-[#F4F6F9] overflow-hidden">
       <Sidebar nomePessoa="Eduardo" cargo="Gerente de estoque" />
-      <div className="flex-1 flex-col h-screen">
+      <div className="flex-1 flex flex-col h-screen overflow-hidden min-h-0">
         <Header
           titulo="Produtos"
           descricao="Gerencie o catálogo e acompanhe os níveis de estoque."
         />
-        <main className="flex-1">
+        <main className="flex-1 overflow-y-auto min-h-0">
           <Produtos />
           <AlertaEstoque />
+
           <div className="flex items-stretch">
             <TabelaProdutos
               produto="Teclado Mecânico K87"

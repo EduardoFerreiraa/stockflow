@@ -7,7 +7,7 @@ function Sidebar({ nomePessoa, cargo }) {
     "flex items-center gap-4 text-[#FFFFFF] bg-[rgba(255,255,255,.09)] px-4 py-3 text-[1rem] transition-all duration-200 rounded-lg hover:bg-[rgba(255,255,255,.13)]";
 
   return (
-    <aside className="bg-[#0E1A2F] text-white h-screen w-72 flex flex-col">
+    <aside className="bg-[#0E1A2F] text-white h-screen w-72 flex flex-col shrink-0">
       <div className="flex items-center gap-3 my-2 mx-6">
         <img className="w-10 " src={LogoStockFlow} alt="Logo" />
         <h1 className="text-center font-black text-[23px] my-5">StockFlow</h1>
